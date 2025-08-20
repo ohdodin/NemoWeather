@@ -60,6 +60,11 @@ struct WeatherView: View {
         }
         .padding(40)
         .frame(maxWidth: .infinity)
+        .onAppear {
+            let sample = loadSampleWeather()
+            let sample_domain = sample?.toDomain()
+            print(sample_domain?.temperature ?? "None" )
+        }
     }
 }
 

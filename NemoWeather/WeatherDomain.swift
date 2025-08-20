@@ -24,15 +24,3 @@ struct WeatherDomain {
         self.date = Date()
     }
 }
-
-extension WeatherDTO {
-    func toDomain() -> WeatherDomain {
-        return WeatherDomain(
-                    temperature: main.temp,
-                    condition: weather.first?.main ?? "",
-                    region: name,
-                    clouds: clouds.all,
-                    humidity: main.humidity,
-                )
-    }
-}
