@@ -11,7 +11,9 @@ import SwiftUI
 struct NemoWeatherApp: App {
     var body: some Scene {
         WindowGroup {
-            WeatherView()
+            NavigationStack {
+                ContentView()
+            }
         }
     }
 }
