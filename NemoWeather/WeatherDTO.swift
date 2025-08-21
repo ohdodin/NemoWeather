@@ -64,7 +64,7 @@ struct Sys: Decodable {
 extension WeatherDTO {
     func toDomain() -> WeatherDomain {
         return WeatherDomain(
-                    temperature: main.temp,
+                    temperature: main.temp - 273,
                     condition: weather.first?.main ?? "",
                     region: name,
                     clouds: clouds.all,
